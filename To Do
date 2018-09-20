@@ -1,0 +1,50 @@
+To Do for AtomView
+
+----------------Substitution module
+	Remove a hydrogen and replace with functional group
+
+----------------Implement basic parser for human input to program
+	Set up flex for parsing single strings
+		Update/Append Token list
+	Create basic algorithm for handling tokens
+		Identify base
+			If chain, identify position of any abnormal bonds and their orientation
+		Identify locations of substituents
+		Call proper group-building functions in Functional.cpp
+
+----------------Interface
+	Create Input Mode:
+		Create text field at top left
+		DRAW CURSOR to indicate activity
+		Make sure text displays properly
+		Use capture() (already in code) to handle text field updates
+		On Enter Key,
+			Clear current drawn objects and configurations
+			send text to parser
+			*IF VALID* switch to View Mode
+	Add to View Mode:
+		Clicking on text field toggles Input Vs View Mode
+
+----------------More functional/base groups!!
+
+In order of importance:
+	Alkyls			X
+	Alkenes			_
+	Alkynes			_
+	Benzene			_
+	Alcohols		_
+	Aldehydes		_
+	Ketones			_
+	Carboxyllic Acids	_
+	Amines			_
+	Nitros			_
+	Phenyls			_
+	Benzyls			_
+	Phenols			_
+	Benzaldehydes		_
+	Alkoxys			_
+	Hydroxy			_
+
+Others?
+
+

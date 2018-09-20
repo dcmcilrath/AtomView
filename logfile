@@ -1,0 +1,330 @@
+r110 - dcmcilrath
+changed formula to off by default
+
+r109 - dcmcilrath
+changes to assignSwapHydrogen to make more adaptable
+
+r108 - dcmcilrath
+Parser now works with parenthesis; working on fixing bugs with attaching benzene which nearly always fails
+
+r107 - dcmcilrath
+Parser working, nesting not but not currently breaking anything, may fix later;  added halogenation, sulfur-based compounds
+
+r106 - dcmcilrath
+Parser back to working; working on fleshing out functional groups
+
+r105 - dcmcilrath
+Updates to Anchor, working on adding oxygen groups, dimethylether works
+
+r104 - dcmcilrath
+New angle formula appears to have (mostly) fixed things
+
+r103 - dcmcilrath
+paranormal activity 2: the angle haunting continues
+
+r102 - dcmcilrath
+angle bug has returned to haunt program
+
+r101 - dcmcilrath
+Working on fixing bug in relative angles
+
+r100 - dcmcilrath
+Added phenyl, benzyl creation; moved attachment to Functional.cpp rather than higher level
+
+r99 - dcmcilrath
+benzene now working
+
+r98 - dcmcilrath
+adding bonds now actually works; added function to determine molecular formula of compound
+
+r97 - dcmcilrath
+Added 'addBond' function which removes H2 and increases bond multiplicity
+
+r96 - dcmcilrath
+Moved attachement to Anchor.cpp; added getCarbonByPosition and assignSwapHydrogen
+
+r95 - dcmcilrath
+added Anchor class to assist with connecting groups
+
+r94 - dcmcilrath
+working on new method of connecting groups, new model to have much more subgroup focus as opposed to single level
+
+r93 - dcmcilrath
+Working on makeAlkylGroup
+
+r92 - dcmcilrath
+Added command line arguments to set DISTRIBUTION and RESOLUTION variables
+
+r91 - dcmcilrath
+made DISTRIBUTION and RESOLUTION global variables with potential to be controlled by key commands
+
+r90 - dcmcilrath
+Relative bond angles working
+
+r89 - dcmcilrath
+with new bond system, methan works, working on ethane
+
+r88 - dcmcilrath
+setUpRendering now takes Triple which is source vector (this is set by bond angle for all non-starting elements)
+
+r87 - dcmcilrath
+added rotation component to Bond
+
+r86 - dcmcilrath
+added acetoxy group
+
+r85 - dcmcilrath
+Indole bug fixed, added halogenation
+
+r84 - dcmcilrath
+added ethers, esters, amines, indoles (though indoles are buggy)
+
+r83 - dcmcilrath
+Added new functional groups: napthyl/napthalene, allyl & vinyl
+
+r82 - dcmcilrath
+Fixed numbering, added nitros
+
+r81 - dcmcilrath
+added generate.cpp which is a parser for IUPAC names; currently works well for unedited attempt, unfortunately ignores placement and segfaults on pentane, hexane
+
+r80 - dcmcilrath
+Actually added text.cpp; Lexer now returns vector of tokens to be passed to the parser
+
+r79 - dcmcilrath
+Name of compound now displayed in top left, program set up to take name as starting parameter
+
+r78 - dcmcilrath
+Fixed COOH generation, isoleucine now able to be drawn
+
+r77 - dcmcilrath
+Changed makeFunctionalCarbonChain to makeAlkylGroup and makeCarbonChain to makeAlkane for shorter names and to separate them from Alkene/Alkyne generation
+
+r76 - dcmcilrath
+Added amine group creation; carboxyllic acids are buggy
+
+r75 - dcmcilrath
+Added functions to generate benzene rings
+
+r74 - dcmcilrath
+started function to automate substitution
+
+r73 - dcmcilrath
+Organization update: moved crowded list of functions referenced by AVHeaders into 3 smaller headers
+
+r72 - dcmcilrath
+Debugging mode now toggled by flag --debug or -d
+
+r71 - dcmcilrath
+Changed concept page into a to-do list for wrapping up the project
+
+r70 - dcmcilrath
+Finally fixed angle bug
+
+r69 - dcmcilrath
+debugging output now properly set up
+
+r68 - dcmcilrath
+still working on bug fixes
+
+r67 - dcmcilrath
+Added new math-related class "Triple" to help with calculations
+
+r66 - dcmcilrath
+Actually added Functional.(c/h)pp
+
+r65 - dcmcilrath
+still working on fixing hydrogen problem
+
+r64 - dcmcilrath
+"Capable of drawing carbon chains" though buggy on drawing the intermediary hydrogens
+
+r63 - dcmcilrath
+added ability to move image around with arrow keys
+
+r62 - dcmcilrath
+Changed Bonds to having a reference and next as opposed to pos/neg due to confusion in auto-generation of bonds occuring in an opposite reference frame
+
+r61 - dcmcilrath
+Ethane test works but ethanol is not rendering OH group for some reason
+
+r60 - dcmcilrath
+added code to create drawing objects once structure has been determined, appears to have bugs when more electronegative atoms are non-central but otherwise works well
+
+r59 - dcmcilrath
+Added UI.cpp which handles the user interface to avoid clutter in the main event loop
+
+r58 - dcmcilrath
+added getElementColor lookup function, demo now displays each possible color that a sphere can be
+
+r57 - dcmcilrath
+added Atomic Radius to version control
+
+r56 - dcmcilrath
+added allocation for bonds with angles
+
+r55 - dcmcilrath
+added angle to Bond
+
+r54 - dcmcilrath
+Actually added Element and Group to version control
+
+r53 - dcmcilrath
+beginning work on creating drawing objects once configuration is known
+
+r52 - dcmcilrath
+added atomic radius table
+
+r51 - dcmcilrath
+Changed over to Element/Group class model, decided that atoms (elements) should be subgroups of molecules (groups) and not the other way around
+
+r50 - dcmcilrath
+Changed background to white, changed demo molecule to methane to show display of white atoms (hydrogen) against white background
+
+r49 - dcmcilrath
+Added Lexer.lex to makefile, Token.hpp to AVHeaders; bug/compatability fixes necessary to get program to build & run with new additions
+
+r48 - dcmcilrath
+Added Lexer.lex (copy from test.lex in side project) need to add headers + add to make file
+
+r47 - dcmcilrath
+Added Token.hpp from side project into the main stream
+
+r46 - dcmcilrath
+Added formalCharge(), determineHybridization() and statistics() to Molecule.hpp
+
+r45 - dcmcilrath
+bug fix, for got namespace in Group.cpp
+
+r44 - dcmcilrath
+added constructors to Group.cpp
+
+r43 - dcmcilrath
+Added code to Molecule.cpp, removed neutrons as they are uninteresting for modeling purposes
+
+r42 - dcmcilrath
+Updated sphere drawing logic to use 1/2 as many polygons due to only drawing side of sphere facing camera; some updates to test UI
+
+r41 - dcmcilrath
+Moved trig/math functions to separate file 'Trig.cpp'
+
+r40 - dcmcilrath
+fixed angle ambiguity problem
+
+r39 - dcmcilrath
+added Keys.cpp to version control
+
+r38 - dcmcilrath
+Added color.cpp to version control
+
+r37 - dcmcilrath
+Successful implementation of basic axial rotations; buggy when not on an axis however, problem appears to be in determining angle (ambiguity of inverse trig functions)
+
+r36 - dcmcilrath
+added skeleton of rotate function to DrawingObject.cpp
+
+r35 - dcmcilrath
+added exit key 'x' using Keys.cpp as a test
+
+r34 - dcmcilrath
+Directories from old organizational scheme now removed
+
+r33 - dcmcilrath
+Successfully moved to drawingobject-based model
+
+r32 - dcmcilrath
+Added color.cpp
+
+r31 - dcmcilrath
+removed graphics.hpp (merged into AVHeaders)
+
+r30 - dcmcilrath
+removed tables.hpp (merged into AVHeaders)
+
+r29 - dcmcilrath
+Added color.hpp
+
+r28 - dcmcilrath
+added more to drawingobject.cpp
+
+r27 - dcmcilrath
+Got rid of annoying directory system
+
+r26 - dcmcilrath
+Added DrawingObject.hpp
+
+r25 - dcmcilrath
+solved directory problem with makefile
+
+r24 - dcmcilrath
+Addedd drawingtools to version control
+
+r23 - dcmcilrath
+added graphics building to makefile, restored electronegativity table
+
+r22 - dcmcilrath
+added resolution variable to drawGLSphere, added graphics directory and header similar to tables
+
+r21 - dcmcilrath
+Added graphical main to Main.cpp, renamed Atom to Molecule and Molecule to Group due to naming conflict with graphics libraries
+
+r20 - dcmcilrath
+added molecule.cpp to version control; added 'cflags' to build instructions for subdirectories to allow for debugging
+
+r19 - dcmcilrath
+updated bond.cpp to correctly determine pos/neg when given ionic compounds
+
+r18 - dcmcilrath
+added ionic as bond type to bond.hpp
+
+r17 - dcmcilrath
+added molecule.hpp, defined molecules as atoms for recursive structuring)
+
+r16 - dcmcilrath
+added no-args constructor for Bond class
+
+r15 - dcmcilrath
+Bond.cpp/hpp bug fixes: naming problems, argument mismatches
+
+r14 - dcmcilrath
+Added Bond.(cpp/hpp), added header to makefile
+
+r13 - dcmcilrath
+Accidentally added binary file to version control (Atom.o) Now fixed
+
+r12 - dcmcilrath
+Added Atom.cpp to version control
+
+r11 - dcmcilrath
+finally removed discontinued file Molecule.hpp from version control
+
+r10 - dcmcilrath
+makefile now correctly builds subdirectories into single object files for master compilation; namespacing problem with Tables fixed by omitting 'using namespace Tables;' from file and using Tables::* form for functions
+
+r9 - dcmcilrath
+fixed consistency issues with Tables.hpp; added class listing to prevent dependency errors in AVHeaders; updated makefile
+
+r8 - dcmcilrath
+renamed molecule.hpp to atom.hpp; added atom.cpp with placeholders; updated makefile
+
+r7 - dcmcilrath
+Updated some tables, added basic code to Main.c to test Enegativity.c
+
+r6 - dcmcilrath
+Added the tables directory, electronegativity table, and tables combinied header file (Tabels.hpp)
+
+r5 - dcmcilrath
+Added newfile creation template; added main.cpp, avheaders.hpp; touched molecule.hpp (needs further work)
+
+r4 - dcmcilrath
+Removed Atom.(c/h)pp, going to fractal molecule based data structure; updated makefile
+
+r3 - dcmcilrath
+Added Atom.(c/h)pp; working on finishing Atom.cpp
+
+r2 - dcmcilrath
+added baseline for algorithm to Concept page
+
+r1 - dcmcilrath
+Added makefile and Concept statement
+
