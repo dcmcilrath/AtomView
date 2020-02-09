@@ -14,6 +14,8 @@ std::vector<Token> tokens;
 
 int uncodePrefix(char *);
 
+extern "C" int yylex(void);
+
 %}
 
 DIGIT		[0-9]
